@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QuizNS;
+using System;
+using System.Collections.Generic;
 
 namespace Quiz
 {
@@ -6,7 +8,6 @@ namespace Quiz
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }

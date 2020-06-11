@@ -4,12 +4,24 @@ using System.Text;
 
 namespace QuizNS
 {
-    public class Question
+    public abstract class Question
     {
-        private static int nextQuestionNumber = 1;
-        public readonly int questionNumber
-        public string ClassName { get; set; }
-        public string ClassName { get; set; }
-        public string ClassName { get; set; }
+        private string ToAsk { get; set; }
+        public int PointValue { get; set; } 
+    
+        public Question(int point, string toAsk)
+        {
+            PointValue = point;
+            ToAsk = toAsk;
+        }
+
+        public void DisplayQuestion()
+        {
+            Console.WriteLine(ToAsk);
+        }
+
+        public abstract void PromptPossibleAnswers();
+
+        public abstract int GetAnswer();
     }
 }
